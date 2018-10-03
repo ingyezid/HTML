@@ -1,0 +1,75 @@
+
+/*
+
+function sumar(A,B)
+{
+    return A + B;
+}
+var A = 1024;
+var B = 256;
+
+// alert("Hola mundo :-) ")
+
+let a = 10;
+let b = 10;
+
+
+if (a>b)
+{
+    alert("Adolfo es grande");
+}
+else if (a==b)
+{ 
+    console.log("Estamos Melos");
+}
+else
+{
+    console.warn("Qué es melos?");
+}
+
+var semana = ["lunes", "martes", "miercoles", "jueves", "viernes"];
+
+for(let i =0; i<semana.length; i++)
+{
+    console.log("Hoy es: "+semana[i]);
+}
+
+let carro = { ruedas: "4", color: "azul", modelo: "coupe", motor: "1500cc" }
+
+class auto{
+    constructor (alto, ancho, color){
+        this.alto = alto;
+        this.ancho = ancho;
+        this.color = color;
+    }
+
+    pitar()
+    {
+        alert( "Hong Kong");
+    }
+
+}
+
+
+*/
+
+
+
+$(document).ready(function(){
+
+    alert("Hola mundo :-), con jquery ");
+
+    $.getJSON("https://jsonplaceholder.typicode.com/users", function(resultado){ 
+
+    console.log(resultado);
+
+        $.each(resultado,function(i,field){
+
+            console.log(resultado[i]);
+
+            $(".ajaxes").append("<li> " + field.name + " | " + field.email + " </li>");
+        })
+
+    }) ;
+
+});
